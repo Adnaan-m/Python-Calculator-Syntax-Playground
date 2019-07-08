@@ -6,17 +6,19 @@ def standard_calc():
     elif operator.upper() == "S":
         print x - y 
     elif operator.upper() == "D":
-        # if x == 0 or y == 0:
-        #     print "ERROR 00: Rhys likes eggs and bugs but not computers"
-        # else:
-            print "%.2f" %(x / y) 
+        try:
+            print "%.2f" %(x / y)
+        except ZeroDivisionError:
+            print "Error 00: Cannot Divide by Zero"
+        else:
+            print "%.2f" %(x / y)
     elif operator.upper() == "M":
         print x * y 
     else:
         print "Incorrect Operator"
 
 print "Welcome to Calculator 101"
-name = raw_input("What is you're name? ")
+name = raw_input("What is your name? ")
 print "Thank you" , name ,", let's get cracking!"
         
 Restart = True
@@ -28,12 +30,9 @@ while Restart == True:
         y = float(input ("Second Integar: "))
         print "What would you like to do with these two numbers", name,"?"
         print "Type [A] to add, [S] to subtract, [D] to divide, [M] to multiply"
+    
+        standard_calc()
         
-        try:
-            standard_calc()
-        except:
-            print "Error 00: Cannot Calculate Total"
-
         Replay = raw_input("Would you like to start again? Y / N: ")
         if Replay.upper() == "N":
             Restart = False
