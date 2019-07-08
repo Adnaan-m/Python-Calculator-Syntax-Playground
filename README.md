@@ -6,7 +6,6 @@ The creation of a simplistic Calculator with interaction through the terminal. T
 
 
 ## Simple Commands
-### Docker commands
 >**Run script** -  ```python <App Name>```
 >
 >**Display in Terminal Command** - ```print "Welcome ", <variable>```
