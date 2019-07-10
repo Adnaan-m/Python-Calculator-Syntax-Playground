@@ -16,6 +16,34 @@ The creation of a simplistic Calculator with interaction through the terminal. T
 >>Mostly Integar inputs - ```input()```
 >>>Define the type of character input (float,int etc.) - ```float(input ("Question: "))```
 
+##Import Modules
+At the top of the script (best practice), Insert:
+>**```import <module name>```**
+
+Note: No colon is required!!
+
+## Functions
+
+**Syntax:** 
+
+>def function_name():
+
+**To Call a Function:**
+>function_name()
+
+##Try / Exceptions
+Python applications throw an error and exit immediately if an error occurs. To avoid this, a try/exception can be implemented to prevent applications from exiting. The following code is implemented within the calculator function to prevent error in dividing from 0. 
+
+The Application first tries to print x/y to two decimal points. . . If x or y is 0, an error is thrown. Rather than the application crashing, an Exception catches the error, relays an error and carries on with the rest of the code.
+
+```python
+try:
+	print "%.2f" %(x / y)
+except ZeroDivisionError:
+	print "Error 00: Cannot Divide by Zero"
+else:
+	print "%.2f" %(x / y)
+```
 ## IF Statements
 
 Syntax: 
@@ -40,7 +68,7 @@ else:
 	print "x is 6"
 ``` 
 ## Loops
-###While Loops
+### While Loops
 Syntax: 
 
 ```python
@@ -51,42 +79,12 @@ else:
 	<do something else>
 ```
 
-
-## Functions
-
-**Syntax:** 
-
->def function_name():
-
-**To Call a Function:**
->function_name()
-
-##Try / Exceptions
-Python applications throw an error and exit immediately if an error occurs. To avoid this, a try/exception can be implemented to prevent applications from exiting. The following code is implemented within the calculator function to prevent error in dividing from 0. 
-
-The Application first tries to print x/y to two decimal points. . . If x or y is 0, an error is thrown. Rather than the application crashing, an Exception catches the error, relays an error and carries on with the rest of the code.
-
-```python
-try:
-	print "%.2f" %(x / y)
-except ZeroDivisionError:
-	print "Error 00: Cannot Divide by Zero"
-else:
-	print "%.2f" %(x / y)
-```
-
-##Import Modules
-At the top of the script (best practice), Insert:
->**```import <module name>```**
-
-Note: No colon is required!!
-
 ## General Notes
 - **Indentation is KEY 🔑.** No parenthesis are used for functions, if statements + loops etc. So the program won't function without correct indentation.
 - AND / OR is used as operators, '&& / ||' do not work.
-- In order to specify variables, you literally insert the variable name with potential comma. No requirement for dollar signs or parenthesis. 
+- Variables are specified as literally just the variable name with potential comma for seperation. No requirement for dollar signs or parenthesis. 
 
-> i.e. ```print "Name:",name``` **Not**  ~~print "Name:" ${name}~~
+> i.e. ```print "Name:",name```      **Not**         ~~print "Name:" ${name}~~
 
 
 
